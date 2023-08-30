@@ -30,7 +30,7 @@ const server = http.createServer((req, res) => {
     }else if(req.url == "/file-write"){
        fs.writeFile("demo.txt", "hello world", (err) => {
         if(err) throw err
-        console.log("Saved!")
+        res.end("Successfully written")
        })
     }
 })
